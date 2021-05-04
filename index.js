@@ -74,6 +74,7 @@ const commitFile = async () => {
   await exec("git", ["config", "--global", "user.email", COMMIT_USER_EMAIL]);
   await exec("git", ["config", "--global", "user.name", COMMIT_USER_NAME]);
   await exec("git", ["add", "README.md"]);
+  await exec("git", ["add", "README.template.md"]);
   await exec("git", ["commit", "-m", COMMIT_MSG]);
   await exec("git", ["commit", "--author", COMMIT_AUTHOR]);
   await exec("git", ["push"]);
