@@ -1610,9 +1610,8 @@ const exec = (cmd, args = []) =>
 const commitFile = async () => {
   await exec("git", ["config", "--global", "user.email", COMMIT_USER_EMAIL]);
   await exec("git", ["config", "--global", "user.name", COMMIT_USER_NAME]);
-  await exec("git", ["add", "README.md"]);
-  await exec("git", ["commit", "-m", COMMIT_MSG]);
-  await exec("git", ["commit", "--author", COMMIT_AUTHOR]);
+  await exec("git", ["add", "README.template.md"]);
+  await exec("git", ["commit", "--author", COMMIT_AUTHOR, "-m", COMMIT_MSG]);
   await exec("git", ["push"]);
 };
 
@@ -1656,7 +1655,9 @@ Toolkit.run(
       // Call the serializer to construct a string
       .map((item) => serializers[item.type](item));
 
-    const readmeContent = fs.readFileSync("./README.md", "utf-8").split("\n");
+    const readmeContent = fs
+      .readFileSync("./README.template.md", "utf-8")
+      .split("\n");
 
     // Find the index corresponding to <!--START_SECTION:activity--> comment
     let startIdx = readmeContent.findIndex(
@@ -1698,7 +1699,7 @@ Toolkit.run(
       );
 
       // Update README
-      fs.writeFileSync("./README.md", readmeContent.join("\n"));
+      fs.writeFileSync("./README.template.md", readmeContent.join("\n"));
 
       // Commit to the remote repository
       try {
@@ -1749,7 +1750,7 @@ Toolkit.run(
     }
 
     // Update README
-    fs.writeFileSync("./README.md", readmeContent.join("\n"));
+    fs.writeFileSync("./README.template.md", readmeContent.join("\n"));
 
     // Commit to the remote repository
     try {
