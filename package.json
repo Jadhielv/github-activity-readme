@@ -12,8 +12,8 @@
     "build": "ncc build index.js -o dist"
   },
   "dependencies": {
-    "@actions/core": "^1.2.6",
-    "actions-toolkit": "^5.0.0"
+    "@actions/core": "^1.4.0",
+    "actions-toolkit": "^6.0.1"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
