@@ -16,7 +16,6 @@
     "actions-toolkit": "^6.0.1"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.22.3",
     "prettier": "^2.0.5"
   }
 }
