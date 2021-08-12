@@ -16,6 +16,7 @@
     "actions-toolkit": "^6.0.1"
   },
   "devDependencies": {
+    "@vercel/ncc": "^0.29.0",
     "prettier": "^2.0.5"
   }
 }
