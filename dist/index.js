@@ -15827,6 +15827,8 @@ const exec = (cmd, args = []) =>
       stdout = data;
     });
     app.on("close", (code) => {
+      console.log(code);
+      console.log(stdout);
       if (code !== 0 && !stdout.includes("nothing to commit")) {
         err = new Error(`Invalid status code: ${code}`);
         err.code = code;
