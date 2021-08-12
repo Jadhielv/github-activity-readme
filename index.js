@@ -217,9 +217,7 @@ Toolkit.run(
 
     // Commit to the remote repository
     try {
-      console.log("OK");
       await commitFile();
-      console.log("BUG");
     } catch (err) {
       tools.log.debug("Something went wrong");
       return tools.exit.failure(err);
