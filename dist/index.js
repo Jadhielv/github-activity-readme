@@ -15827,8 +15827,6 @@ const exec = (cmd, args = []) =>
       stdout = data;
     });
     app.on("close", (code) => {
-      console.log(code);
-      console.log(stdout);
       if (code !== 0 && !stdout.includes("nothing to commit")) {
         err = new Error(`Invalid status code: ${code}`);
         err.code = code;
@@ -15992,7 +15990,9 @@ Toolkit.run(
 
     // Commit to the remote repository
     try {
+      console.log("OK");
       await commitFile();
+      console.log("BUG");
     } catch (err) {
       tools.log.debug("Something went wrong");
       return tools.exit.failure(err);
