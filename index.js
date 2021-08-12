@@ -177,6 +177,7 @@ Toolkit.run(
       try {
         await commitFile();
       } catch (err) {
+        console.log(err);
         tools.log.debug("Something went wrong");
         return tools.exit.failure(err);
       }
@@ -228,7 +229,6 @@ Toolkit.run(
     try {
       await commitFile();
     } catch (err) {
-      console.log(err);
       tools.log.debug("Something went wrong");
       return tools.exit.failure(err);
     }
