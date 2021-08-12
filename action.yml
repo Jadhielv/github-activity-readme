@@ -25,7 +25,7 @@ inputs:
     required: false
   COMMIT_AUTHOR:
     description: Value used for the commit author. Defaults to the username of whoever triggered this workflow run.
-    default: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+    default: Jadhielv <Jadhielv@users.noreply.github.com>
     required: false
 
 branding:
