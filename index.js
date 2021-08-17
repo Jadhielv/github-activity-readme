@@ -119,7 +119,7 @@ Toolkit.run(
       .map((item) => serializers[item.type](item));
 
     const readmeContent = fs
-      .readFileSync("./README.template.md", "utf-8")
+      .readFileSync("./README.md", "utf-8")
       .split("\n");
 
     // Find the index corresponding to <!--START_SECTION:activity--> comment
@@ -162,7 +162,7 @@ Toolkit.run(
       );
 
       // Update README
-      fs.writeFileSync("./README.template.md", readmeContent.join("\n"));
+      fs.writeFileSync("./README.md", readmeContent.join("\n"));
 
       // Commit to the remote repository
       try {
@@ -213,7 +213,7 @@ Toolkit.run(
     }
 
     // Update README
-    fs.writeFileSync("./README.template.md", readmeContent.join("\n"));
+    fs.writeFileSync("./README.md", readmeContent.join("\n"));
 
     // Commit to the remote repository
     try {
