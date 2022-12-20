@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: jamesgeorge007/github-activity-readme@master
+      - uses: Jadhielv/github-activity-readme@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -69,7 +69,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: jamesgeorge007/github-activity-readme@master
+      - uses: Jadhielv/github-activity-readme@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
