@@ -77,4 +77,4 @@ jobs:
           MAX_LINES: 10
 ```
 
-_Inspired by [JasonEtco/activity-box](https://github.com/JasonEtco/activity-box)_
+_Inspired by [jamesgeorge007/github-activity-readme](https://github.com/jamesgeorge007/github-activity-readme)_
